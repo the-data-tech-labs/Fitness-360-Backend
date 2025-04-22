@@ -216,11 +216,11 @@ SIMPLE_JWT = {
 # email credential for sending email
 # EMAIL_HOST='smtpout.secureserver.net'
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='sakshivyavaharerk10@gmail.com'
-EMAIL_HOST_PASSWORD='isdq ihog fyid wtpu'
+EMAIL_HOST_USER='add email'
+EMAIL_HOST_PASSWORD='add host password'
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
 
-GEMINI_API_KEY = 'AIzaSyA8RxXyEA7jwsuQcUrIV2rP2br04-o3tAk'
+GEMINI_API_KEY = "add ur own api key"
