@@ -1,5 +1,5 @@
 from django.urls import path
-from timer.views import StartTimerView, StopTimerView, TimerStatusView
+from .views import StartTimerView, StopTimerView, TimerStatusView
 
 urlpatterns = [
     path('start/', StartTimerView.as_view(), name='start_timer'),
