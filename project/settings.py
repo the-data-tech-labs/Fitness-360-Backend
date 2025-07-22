@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'timer',
     'app',
     'community',
     'journal',
@@ -57,7 +58,7 @@ INSTALLED_APPS = [
     'fitness',
     'nutrition',
     'corsheaders',
-     'django_filters'
+    'django_filters'
 ]
 
 MIDDLEWARE = [
