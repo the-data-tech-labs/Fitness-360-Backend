@@ -26,9 +26,10 @@ urlpatterns = [
     path('api/', include('timer.urls')),  # Include URLs from the timer app
     path('fitness/',include('fitness.urls')),
     path('nutrition/',include('nutrition.urls')),
-     path('meditation/',include('meditation.urls')),
+    path('meditation/',include('meditation.urls')),
     path('api/community/', include('community.urls')),
-    path('api/', include('journal.urls')),
+    path('api/', include('journal.urls')), 
+    path('highlights/', include('highlights.urls')), 
 
     
 ]
