@@ -19,6 +19,7 @@ class UserInput(models.Model):
     Target_timeline = models.CharField(max_length=100) 
 
 class DietRecommendation(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     profile = models.ForeignKey(UserInput, on_delete=models.CASCADE)
     recommendation_text = models.TextField()
     bmi = models.FloatField()
