@@ -43,7 +43,7 @@ class FitnessRecommendationAPI(APIView):
             bmi, bmi_category = calculate_bmi(profile.weight, profile.height)
 
             genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-            model = genai.GenerativeModel("gemini-1.5-pro")
+            model = genai.GenerativeModel("gemini-1.5-flash")
 
             prompt = f"""
             As an expert fitness trainer, create a structured fitness plan for:
