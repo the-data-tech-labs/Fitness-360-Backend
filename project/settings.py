@@ -41,13 +41,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'highlights',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'timer',
     'app',
     'community',
     'journal',
@@ -217,11 +217,11 @@ SIMPLE_JWT = {
 # email credential for sending email
 # EMAIL_HOST='smtpout.secureserver.net'
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='add email'
-EMAIL_HOST_PASSWORD='add host password'
+EMAIL_HOST_USER='sakshivyavaharerk10@gmail.com'
+EMAIL_HOST_PASSWORD='isdq ihog fyid wtpu'
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
 
-GEMINI_API_KEY = "add ur own api key"
+GEMINI_API_KEY = 'AIzaSyBMhKV6TNbtzt4xBka9-I2Bq55WYcEaEH0'
