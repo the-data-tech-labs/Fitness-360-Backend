@@ -55,10 +55,11 @@ class DietRecommendationAPI(APIView):
                     float(profile.height)
                 )
                 
-                # Configure Gemini
+                print("started")
                 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-                model = genai.GenerativeModel('gemini-1.5-pro')
+                model = genai.GenerativeModel("gemini-1.5-flash")
                 
+                print("before prompting")
                 # Modify the prompt to explicitly request raw JSON without markdown
                 prompt = f"""
                 You are an expert nutritionist specializing in personalized diet planning. Create a detailed, culturally-appropriate diet plan based on the following profile. 
@@ -253,7 +254,9 @@ class DietRecommendationAPI(APIView):
                 """
                 
                 # Generate response
+                print("before response created")
                 response = model.generate_content(prompt)
+                print("response created")
                 
                 try:
                     # Clean the response text - remove any potential markdown formatting
@@ -271,6 +274,7 @@ class DietRecommendationAPI(APIView):
                     
                     # Save recommendation
                     recommendation = DietRecommendation.objects.create(
+                        user=request.user,
                         profile=profile,
                         recommendation_text=json.dumps(recommendation_json),  
                         bmi=bmi,
